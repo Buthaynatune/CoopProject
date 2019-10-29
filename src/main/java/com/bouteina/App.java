@@ -34,6 +34,8 @@ public class App extends  Application {
         stage.setTitle("Willis College ");
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     public GridPane createGridPane() {
@@ -109,18 +111,17 @@ public class App extends  Application {
 
         grid.add(new Separator(), 0, 15, 3, 1);
 
-//        FlowPane fp2 = new FlowPane(Orientation.HORIZONTAL, 20, 20);
-//        fp2.setAlignment(Pos.CENTER_RIGHT);
-//        fp2.getChildren().addAll(
-//                new Label("Pass/Fail entered in Proff "),
-//                new RadioButton(),
-//                new Label("Attendancé entered in Proff"),
-//                new RadioButton()
-//
-//
-//              );
-//
-//        grid.add(fp2, 0, 16, 1, 2);
+        FlowPane fp2 = new FlowPane(Orientation.HORIZONTAL, 20, 20);
+        fp2.setAlignment(Pos.CENTER_RIGHT);
+        Button btn = new Button("Save and Prnt");
+        fp2.getChildren().addAll(
+                btn
+              );
+        btn.setOnAction(e ->{
+            System.out.println("Success");
+        });
+
+     grid.add(fp2, 0, 16, 1, 2);
         grid.add(new Separator(), 3, 18, 1, 1);
         Text txtom = new Text("Office Manager ");
         txtom.setFont(Font.font("Dialog", FontWeight.BOLD, 12));

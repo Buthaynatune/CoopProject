@@ -117,8 +117,17 @@ public class App extends  Application {
         fp2.getChildren().addAll(
                 btn
               );
+
+        Button search = new Button("Search");
+        fp2.getChildren().addAll(
+                search
+        );
         btn.setOnAction(e ->{
             System.out.println("Success");
+        });
+
+        search.setOnAction(e ->{
+            System.out.println("Search");
         });
 
      grid.add(fp2, 0, 16, 1, 2);

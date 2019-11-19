@@ -113,7 +113,7 @@ public class App extends  Application {
 
         FlowPane fp2 = new FlowPane(Orientation.HORIZONTAL, 20, 20);
         fp2.setAlignment(Pos.CENTER_RIGHT);
-        Button btn = new Button("Save and Prnt");
+        Button btn = new Button("Save and Print");
         fp2.getChildren().addAll(
                 btn
               );
@@ -130,10 +130,18 @@ public class App extends  Application {
             System.out.println("Search");
         });
 
-     grid.add(fp2, 0, 16, 1, 2);
+        grid.add(fp2, 0, 16, 1, 2);
         grid.add(new Separator(), 3, 18, 1, 1);
         Text txtom = new Text("Office Manager ");
         txtom.setFont(Font.font("Dialog", FontWeight.BOLD, 12));
+
+        Button sign1 = new Button("Click to sign");
+        fp2.getChildren().addAll(
+                sign1
+        );
+        sign1.setOnAction(e ->{
+            System.out.println("Submitted");
+        });
 
         grid.add(txtom, 2, 17, 1, 1);
         Text txtpc = new Text("Placement Coordinator");
